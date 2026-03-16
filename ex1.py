@@ -39,24 +39,12 @@ class Pilha:
         self._size -= 1
         return elem.value
     
-    def mostrar(self):
-        if self.topo is None:
-            return None
-        pointer = self.topo
-
-        while (pointer):
-            print(pointer.value, end = "")
-            pointer = pointer.next
-
 p = Pilha()
-p.push("a")
-p.push("l")
-p.push("g")
-p.push("o")
-p.push("r")
-p.push("i")
-p.push("t")
-p.push("m")
-p.push("o")
-p.push("s")
-p.mostrar()
+
+palavra = input("Digite a palavra: ")
+
+for letra in palavra:
+    p.push(letra)
+    
+while p.topo is not None:
+    print(p.pop(), end = "")
