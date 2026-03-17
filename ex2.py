@@ -52,12 +52,16 @@ for p in entrada:
 
 while emp.topo is not None:
     elemento = emp.pop()
+    print(elemento)
+    
     for desemp in elemento:
-        if emp == abrirParenteses:
-            contAbrir += 1 
-        if emp == fecharParenteses:
+        if desemp == fecharParenteses:
             contFechar += 1 
+        if desemp == abrirParenteses:
+            contAbrir += 1 
 
+print(contAbrir)
+print(contFechar)
 if contAbrir == contFechar:
     print("Válido")
 else:
