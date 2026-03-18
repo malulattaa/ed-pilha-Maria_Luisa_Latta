@@ -32,6 +32,7 @@ def verificar_parenteses(value):
         elif elem == ')':
             if p.topo is None:
                 valido = False
+                break
             p.pop()
 
     if p.topo is not None:
